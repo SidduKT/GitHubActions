@@ -6,6 +6,10 @@ on:
   workflow_dispatch:
     inputs:
       environment:
+        description: this is the environment where this workflow runs
+        default: 'dev'
+        required: true
+        type: choice
         options:
           - dev
           - prod
