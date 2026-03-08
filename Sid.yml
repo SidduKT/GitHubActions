@@ -9,3 +9,42 @@ hobbies:
   - reading books
   - watching movies
 tools: [Loadrunner, Jmeter, Git, GitHub, Jenkins, Docker, Github Actions]
+experience:
+  PerformanceTesting:
+    Loadrunner: 9
+    Jmeter: 4
+  Devops:
+    Linux: 2
+    Docker: 1
+    K8s: 1
+
+
+  #below is from the yaml lint corrector
+  ---
+name: Srisiddeshwaraswamy K T
+location: Banglore
+dob: 10/02/1995
+hobbies:
+  - learning
+  - workouts
+  - working
+  - running
+  - reading books
+  - watching movies
+tools:
+  - Loadrunner
+  - Jmeter
+  - Git
+  - GitHub
+  - Jenkins
+  - Docker
+  - Github Actions
+experience:
+  PerformanceTesting:
+    Loadrunner: 9
+    Jmeter: 4
+  Devops:
+    Linux: 2
+    Docker: 1
+    K8s: 1
+
