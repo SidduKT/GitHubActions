@@ -7,12 +7,14 @@
 
 <title>Siddeshwaraswamy KT | DevOps Engineer</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
 <style>
+
+/* RESET */
 
 *{
 margin:0;
@@ -22,65 +24,87 @@ font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
 }
 
+/* PROFESSIONAL BACKGROUND */
+
 body{
-background:#020617;
-color:white;
+
+background:
+radial-gradient(circle at 20% 20%, rgba(56,189,248,0.15), transparent 40%),
+radial-gradient(circle at 80% 70%, rgba(99,102,241,0.15), transparent 40%),
+linear-gradient(135deg,#020617,#0f172a,#020617);
+
+color:#e2e8f0;
+min-height:100vh;
+position:relative;
 overflow-x:hidden;
+
 }
 
-/* particles */
+/* TECH GRID OVERLAY */
 
-#particles-js{
+body::before{
+
+content:"";
 position:fixed;
+top:0;
+left:0;
 width:100%;
 height:100%;
-z-index:-1;
+
+background-image:
+linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+
+background-size:40px 40px;
+
+pointer-events:none;
+
 }
 
-/* navbar */
+/* NAVBAR */
 
 nav{
 display:flex;
 justify-content:center;
 gap:40px;
 padding:18px;
-background:rgba(0,0,0,0.6);
+background:rgba(2,6,23,0.8);
 backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,0.08);
 position:sticky;
 top:0;
 z-index:100;
 }
 
 nav a{
-color:white;
 text-decoration:none;
+color:#e2e8f0;
 font-weight:500;
-transition:.3s;
 }
 
 nav a:hover{
 color:#38bdf8;
 }
 
-/* hero */
+/* HERO */
 
 header{
 text-align:center;
-padding:120px 20px 80px;
+padding:110px 20px 80px;
 }
 
 header h1{
 font-size:48px;
+margin-bottom:10px;
 }
 
 .typing{
 font-size:22px;
-margin-top:10px;
 color:#38bdf8;
 height:30px;
 }
 
-/* buttons */
+/* BUTTON */
 
 .btn{
 display:inline-block;
@@ -98,7 +122,7 @@ transition:.3s;
 background:#0ea5e9;
 }
 
-/* section */
+/* SECTIONS */
 
 section{
 max-width:1100px;
@@ -109,6 +133,7 @@ padding:80px 20px;
 section h2{
 text-align:center;
 margin-bottom:40px;
+font-size:28px;
 }
 
 section h2::after{
@@ -120,7 +145,7 @@ background:#38bdf8;
 margin:10px auto;
 }
 
-/* about */
+/* ABOUT */
 
 #about p{
 max-width:800px;
@@ -129,7 +154,7 @@ text-align:center;
 line-height:1.8;
 }
 
-/* skills */
+/* SKILLS */
 
 .skills{
 display:grid;
@@ -140,47 +165,49 @@ gap:25px;
 .skill{
 background:rgba(255,255,255,0.05);
 padding:25px;
-border-radius:12px;
-transition:.4s;
+border-radius:10px;
+border:1px solid rgba(255,255,255,0.08);
 text-align:center;
+transition:.3s;
 }
 
 .skill:hover{
-transform:translateY(-10px) rotateX(5deg);
-box-shadow:0 10px 20px rgba(0,0,0,0.6);
+transform:translateY(-8px);
+box-shadow:0 10px 20px rgba(0,0,0,0.5);
 }
 
 .skill i{
-font-size:35px;
-color:#38bdf8;
+font-size:32px;
 margin-bottom:10px;
+color:#38bdf8;
 }
 
-/* projects */
+/* PROJECTS */
 
 .projects{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:30px;
 }
 
 .project{
 background:rgba(255,255,255,0.05);
 padding:25px;
-border-radius:12px;
-transition:.4s;
+border-radius:10px;
+border:1px solid rgba(255,255,255,0.08);
+transition:.3s;
 }
 
 .project:hover{
 transform:scale(1.05);
-box-shadow:0 0 25px #38bdf8;
+box-shadow:0 0 20px rgba(56,189,248,0.5);
 }
 
-/* timeline */
+/* EXPERIENCE */
 
 .timeline{
 border-left:3px solid #38bdf8;
-padding-left:30px;
+padding-left:25px;
 }
 
 .timeline-item{
@@ -189,9 +216,10 @@ margin-bottom:30px;
 
 .timeline-item h4{
 color:#38bdf8;
+margin-bottom:5px;
 }
 
-/* contact */
+/* CONTACT */
 
 .contact{
 text-align:center;
@@ -204,23 +232,24 @@ margin-top:20px;
 .socials a{
 font-size:22px;
 margin:0 10px;
-color:white;
+color:#e2e8f0;
 }
 
 .socials a:hover{
 color:#38bdf8;
 }
 
-/* footer */
+/* FOOTER */
 
 footer{
 text-align:center;
 padding:20px;
-background:#000;
 margin-top:40px;
+background:#020617;
+border-top:1px solid rgba(255,255,255,0.08);
 }
 
-/* responsive */
+/* RESPONSIVE */
 
 @media(max-width:768px){
 
@@ -240,7 +269,7 @@ gap:20px;
 
 <body>
 
-<div id="particles-js"></div>
+<!-- NAVBAR -->
 
 <nav>
 
@@ -252,6 +281,8 @@ gap:20px;
 
 </nav>
 
+<!-- HERO -->
+
 <header>
 
 <h1>Siddeshwaraswamy K T</h1>
@@ -262,19 +293,24 @@ gap:20px;
 
 </header>
 
+<!-- ABOUT -->
+
 <section id="about">
 
 <h2>About Me</h2>
 
 <p>
 
-I am a DevOps and Performance Testing Engineer specializing in automation,
-CI/CD pipelines, cloud infrastructure and LoadRunner performance testing.
-I enjoy optimizing systems for scalability, performance and reliability.
+Hello! I'm <b>Siddeshwaraswamy K T</b>, a DevOps and Performance Testing Engineer.
+I specialize in building CI/CD pipelines, cloud infrastructure automation,
+and performance testing using LoadRunner. I enjoy optimizing systems for
+scalability, reliability, and high performance.
 
 </p>
 
 </section>
+
+<!-- SKILLS -->
 
 <section id="skills">
 
@@ -316,6 +352,8 @@ I enjoy optimizing systems for scalability, performance and reliability.
 
 </section>
 
+<!-- PROJECTS -->
+
 <section id="projects">
 
 <h2>Projects</h2>
@@ -324,22 +362,24 @@ I enjoy optimizing systems for scalability, performance and reliability.
 
 <div class="project">
 <h3>CI/CD Automation</h3>
-<p>Built automated pipelines using Jenkins, Docker and Kubernetes.</p>
+<p>Implemented automated pipelines using Jenkins, Docker and Kubernetes.</p>
 </div>
 
 <div class="project">
 <h3>Performance Testing</h3>
-<p>Designed LoadRunner scripts to validate system performance under peak load.</p>
+<p>Created LoadRunner scripts to test applications under heavy load.</p>
 </div>
 
 <div class="project">
-<h3>DevOps Monitoring</h3>
-<p>Implemented monitoring using Grafana and Prometheus dashboards.</p>
+<h3>Monitoring System</h3>
+<p>Implemented monitoring dashboards using Grafana and Prometheus.</p>
 </div>
 
 </div>
 
 </section>
+
+<!-- EXPERIENCE -->
 
 <section id="experience">
 
@@ -349,17 +389,19 @@ I enjoy optimizing systems for scalability, performance and reliability.
 
 <div class="timeline-item">
 <h4>DevOps Engineer</h4>
-<p>CI/CD pipelines, infrastructure automation and monitoring.</p>
+<p>CI/CD automation, infrastructure management, monitoring.</p>
 </div>
 
 <div class="timeline-item">
 <h4>Performance Testing Engineer</h4>
-<p>LoadRunner scripting, performance analysis and reporting.</p>
+<p>LoadRunner scripting, performance testing and analysis.</p>
 </div>
 
 </div>
 
 </section>
+
+<!-- CONTACT -->
 
 <section id="contact" class="contact">
 
@@ -382,8 +424,6 @@ I enjoy optimizing systems for scalability, performance and reliability.
 <p>© 2026 Siddeshwaraswamy KT | DevOps Engineer</p>
 
 </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
 <script>
 
@@ -441,19 +481,6 @@ loopDeleting();
 }
 
 typingEffect();
-
-/* particles */
-
-particlesJS("particles-js",{
-
-particles:{
-number:{value:80},
-size:{value:3},
-line_linked:{enable:true},
-move:{speed:2}
-}
-
-});
 
 </script>
 
