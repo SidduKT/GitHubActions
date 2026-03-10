@@ -1,51 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siddeshwaraswamy KT | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+    line-height:1.6;
+}
+
+/* Header */
+
+header{
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+header h1{
+    font-size:40px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:18px;
+    color:#ddd;
+}
+
+/* Navigation */
+
+nav{
+    margin-top:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    margin:0 15px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00d4ff;
+}
+
+/* Sections */
+
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#2c5364;
+}
+
+/* About */
+
+#about p{
+    text-align:center;
+    font-size:18px;
+}
+
+/* Projects */
+
+.projects-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+}
+
+.project-card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    width:280px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-5px);
+}
+
+.project-card h3{
+    margin-bottom:10px;
+    color:#203a43;
+}
+
+/* Contact */
+
+#contact{
+    text-align:center;
+}
+
+#contact a{
+    color:#2c5364;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+#contact a:hover{
+    color:#00a8cc;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#203a43;
+    color:white;
+    margin-top:40px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.projects-container{
+    flex-direction:column;
+    align-items:center;
+}
+
+header h1{
+    font-size:30px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
-    <header>
-        <h1>Siddu KT</h1>
-        <p>Web Developer | Designer | Problem Solver</p>
-        <nav>
-            <a href="#about">About</a> |
-            <a href="#projects">Projects</a> |
-            <a href="#contact">Contact</a>
-        </nav>
-        <hr>
-    </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Hello! I’m Siddu, a passionate web developer who loves creating clean, user-friendly websites.
-            I enjoy turning ideas into reality through code.
-        </p>
-    </section>
+<header>
+    <h1>Siddeshwaraswamy K T</h1>
+    <p>DevOps Engineer | Performance Testing Engineer | LoadRunner</p>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <article>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        Hello! I’m <b>Siddeshwaraswamy K T</b>, a passionate developer who enjoys
+        building clean and user-friendly web applications. I specialize in
+        DevOps practices, performance testing, and automation using tools
+        like LoadRunner. I love turning ideas into efficient and scalable solutions.
+    </p>
+</section>
+
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects-container">
+
+        <div class="project-card">
             <h3>Portfolio Website</h3>
-            <p>A personal portfolio showcasing my skills and projects.</p>
-        </article>
-        <article>
+            <p>A personal portfolio showcasing my skills, experience, and projects.</p>
+        </div>
+
+        <div class="project-card">
             <h3>Blog Platform</h3>
-            <p>A simple blog system built with HTML and CSS.</p>
-        </article>
-    </section>
+            <p>A simple blog platform built using HTML and CSS for publishing articles.</p>
+        </div>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: siddu183msd@gmail.com</p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/johndoe">linkedin.com/in/johndoe</a></p>
-    </section>
+        <div class="project-card">
+            <h3>Performance Testing Project</h3>
+            <p>Designed load testing scripts using LoadRunner to analyze system performance under heavy traffic.</p>
+        </div>
 
-    <footer>
-        <hr>
-        <p>&copy; 2026 Siddu KT. All rights reserved.</p>
-    </footer>
+    </div>
+
+</section>
+
+
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <p>Email: siddeshwaraswamykt@gmail.com</p>
+
+    <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/srisiddeshwaraswamy-k-t-5130b219b/" target="_blank">
+            View Profile
+        </a>
+    </p>
+
+</section>
+
+
+<footer>
+    <p>© 2026 Siddeshwaraswamy KT | All Rights Reserved</p>
+</footer>
+
 </body>
 </html>
