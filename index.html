@@ -3,296 +3,403 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Siddeshwaraswamy KT | Portfolio</title>
+
+<title>Siddeshwaraswamy KT | DevOps Portfolio</title>
 
 <style>
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Segoe UI', Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#f4f6f9;
-    color:#333;
-    line-height:1.6;
-    transition: background 0.5s, color 0.5s;
+background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
+background-size:400% 400%;
+animation:gradientBG 12s ease infinite;
+color:white;
 }
 
-/* Dark Mode */
-body.dark{
-    background:#121212;
-    color:#e0e0e0;
-}
-body.dark header{
-    background:linear-gradient(135deg,#1f1f1f,#333,#444);
-}
-body.dark footer{
-    background:#1f1f1f;
+/* animated background */
+
+@keyframes gradientBG{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
 }
 
-/* Header */
-header{
-    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    color:white;
-    text-align:center;
-    padding:70px 20px;
-    animation: fadeIn 2s ease-in-out;
+/* dark mode */
+
+.dark{
+background:#0e0e0e;
 }
-header h1{
-    font-size:42px;
-}
-header p{
-    margin-top:10px;
-    font-size:20px;
-    color:#ddd;
-}
+
+/* navbar */
+
 nav{
-    margin-top:20px;
+display:flex;
+justify-content:center;
+gap:40px;
+padding:20px;
+position:sticky;
+top:0;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+z-index:100;
 }
+
 nav a{
-    text-decoration:none;
-    color:white;
-    margin:0 15px;
-    font-weight:bold;
-    transition:0.3s;
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
 }
+
 nav a:hover{
-    color:#00d4ff;
+color:#00e5ff;
 }
 
-/* Sections */
+/* header */
+
+header{
+text-align:center;
+padding:80px 20px 60px;
+}
+
+header h1{
+font-size:45px;
+letter-spacing:1px;
+}
+
+header p{
+margin-top:10px;
+font-size:20px;
+color:#e0e0e0;
+}
+
+/* profile card */
+
+.profile{
+margin-top:40px;
+display:flex;
+justify-content:center;
+}
+
+.profile-card{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:20px;
+width:320px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+transition:.4s;
+}
+
+.profile-card:hover{
+transform:translateY(-10px);
+}
+
+.profile img{
+width:120px;
+border-radius:50%;
+margin-bottom:15px;
+}
+
+/* sections */
+
 section{
-    max-width:1100px;
-    margin:auto;
-    padding:60px 20px;
+max-width:1100px;
+margin:auto;
+padding:70px 20px;
 }
+
 section h2{
-    text-align:center;
-    margin-bottom:30px;
-    color:#2c5364;
-    position:relative;
+text-align:center;
+margin-bottom:40px;
+font-size:30px;
 }
+
 section h2::after{
-    content:"";
-    display:block;
-    width:70px;
-    height:3px;
-    background:#00a8cc;
-    margin:10px auto 0;
+content:'';
+width:60px;
+height:3px;
+background:#00e5ff;
+display:block;
+margin:10px auto;
 }
 
-/* About */
+/* about */
+
 #about p{
-    text-align:center;
-    font-size:18px;
-    max-width:800px;
-    margin:auto;
+text-align:center;
+font-size:18px;
+line-height:1.8;
+max-width:800px;
+margin:auto;
+color:#e0e0e0;
 }
 
-/* Skills */
-.skills-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-.skill-card{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-.skill-card:hover{
-    transform:translateY(-8px);
-}
-.skill-card h3{
-    margin-bottom:15px;
-    color:#203a43;
-}
-.progress-bar{
-    background:#ddd;
-    border-radius:20px;
-    overflow:hidden;
-    height:12px;
-    margin-top:10px;
-}
-.progress{
-    height:100%;
-    background:#00a8cc;
-    width:0;
-    animation: grow 2s forwards;
-}
-@keyframes grow{
-    from{width:0;}
-    to{width:85%;}
+/* skills */
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
-/* Projects */
-.projects-container{
-    display:flex;
-    flex-wrap:wrap;
-    gap:25px;
-    justify-content:center;
-}
-.project-card{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    width:300px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-.project-card:hover{
-    transform:scale(1.05);
-}
-.project-card h3{
-    margin-bottom:10px;
-    color:#203a43;
+.skill{
+background:rgba(255,255,255,0.08);
+padding:25px;
+border-radius:15px;
+backdrop-filter:blur(10px);
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+transition:.4s;
 }
 
-/* Contact */
+.skill:hover{
+transform:scale(1.05);
+}
+
+.skill h3{
+margin-bottom:10px;
+}
+
+.bar{
+height:10px;
+background:#444;
+border-radius:20px;
+overflow:hidden;
+}
+
+.fill{
+height:100%;
+width:85%;
+background:linear-gradient(90deg,#00e5ff,#00ffa6);
+animation:load 2s ease;
+}
+
+@keyframes load{
+from{width:0}
+}
+
+/* projects */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.project{
+background:rgba(255,255,255,0.08);
+padding:25px;
+border-radius:15px;
+backdrop-filter:blur(10px);
+transition:.4s;
+box-shadow:0 5px 20px rgba(0,0,0,0.4);
+}
+
+.project:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px #00e5ff;
+}
+
+.project h3{
+margin-bottom:10px;
+}
+
+/* contact */
+
 #contact{
-    text-align:center;
+text-align:center;
 }
+
 #contact a{
-    color:#2c5364;
-    text-decoration:none;
-    font-weight:bold;
-}
-#contact a:hover{
-    color:#00a8cc;
+color:#00e5ff;
+text-decoration:none;
+font-weight:500;
 }
 
-/* Footer */
+/* footer */
+
 footer{
-    text-align:center;
-    padding:20px;
-    background:#203a43;
-    color:white;
-    margin-top:40px;
+text-align:center;
+padding:25px;
+margin-top:40px;
+background:rgba(0,0,0,0.4);
 }
 
-/* Animations */
-@keyframes fadeIn{
-    from{opacity:0;}
-    to{opacity:1;}
+/* dark button */
+
+.toggle{
+position:fixed;
+right:20px;
+top:20px;
+padding:10px 15px;
+border:none;
+border-radius:6px;
+background:#00e5ff;
+cursor:pointer;
+font-weight:600;
 }
 
-/* Dark Mode Toggle */
-.toggle-btn{
-    position:fixed;
-    top:20px;
-    right:20px;
-    background:#00a8cc;
-    color:white;
-    border:none;
-    padding:10px 15px;
-    border-radius:5px;
-    cursor:pointer;
-    font-weight:bold;
-}
-.toggle-btn:hover{
-    background:#007a99;
+.toggle:hover{
+background:#00bcd4;
 }
 
-/* Responsive */
+/* responsive */
+
 @media(max-width:768px){
-    .projects-container{
-        flex-direction:column;
-        align-items:center;
-    }
-    header h1{
-        font-size:32px;
-    }
+
+header h1{
+font-size:32px;
 }
+
+nav{
+gap:20px;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
-<button class="toggle-btn" onclick="document.body.classList.toggle('dark')">Toggle Dark Mode</button>
+<button class="toggle" onclick="document.body.classList.toggle('dark')">Dark Mode</button>
+
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
 
 <header>
-    <h1>Siddeshwaraswamy K T</h1>
-    <p>DevOps Engineer | Performance Testing Engineer | LoadRunner Expert</p>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+
+<h1>Siddeshwaraswamy K T</h1>
+<p>DevOps Engineer | Performance Testing Engineer | LoadRunner Expert</p>
+
+<div class="profile">
+<div class="profile-card">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+<h3>DevOps & Performance Specialist</h3>
+
+<p>Building scalable systems, optimizing CI/CD pipelines and ensuring applications perform flawlessly.</p>
+
+</div>
+</div>
+
 </header>
 
 <section id="about">
-    <h2>About Me</h2>
-    <p>
-        Hello! I’m <b>Siddeshwaraswamy K T</b>, an experienced engineer specializing in 
-        <strong>DevOps practices</strong>, <strong>performance testing</strong>, and 
-        <strong>automation with LoadRunner</strong>. I thrive on building scalable solutions, 
-        optimizing CI/CD pipelines, and ensuring applications perform flawlessly under load.
-    </p>
+
+<h2>About Me</h2>
+
+<p>
+
+Hello! I’m <b>Siddeshwaraswamy K T</b>, a passionate DevOps and performance testing engineer.  
+I specialize in automation, CI/CD pipelines, cloud infrastructure and load testing using tools like LoadRunner.  
+I enjoy designing scalable systems and improving application reliability.
+
+</p>
+
 </section>
 
 <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-container">
-        <div class="skill-card">
-            <h3>DevOps Tools</h3>
-            <p>Jenkins, Docker, Kubernetes, Ansible</p>
-            <div class="progress-bar"><div class="progress"></div></div>
-        </div>
-        <div class="skill-card">
-            <h3>Performance Testing</h3>
-            <p>LoadRunner, JMeter, Gatling</p>
-            <div class="progress-bar"><div class="progress"></div></div>
-        </div>
-        <div class="skill-card">
-            <h3>Cloud Platforms</h3>
-            <p>AWS, Azure, GCP</p>
-            <div class="progress-bar"><div class="progress"></div></div>
-        </div>
-        <div class="skill-card">
-            <h3>Monitoring</h3>
-            <p>Grafana, Prometheus, ELK Stack</p>
-            <div class="progress-bar"><div class="progress"></div></div>
-        </div>
-        <div class="skill-card">
-            <h3>Scripting</h3>
-            <p>Python, Shell, Groovy</p>
-            <div class="progress-bar"><div class="progress"></div></div>
-        </div>
-    </div>
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill">
+<h3>DevOps Tools</h3>
+<p>Jenkins, Docker, Kubernetes, Ansible</p>
+<div class="bar"><div class="fill"></div></div>
+</div>
+
+<div class="skill">
+<h3>Performance Testing</h3>
+<p>LoadRunner, JMeter, Gatling</p>
+<div class="bar"><div class="fill"></div></div>
+</div>
+
+<div class="skill">
+<h3>Cloud Platforms</h3>
+<p>AWS, Azure, GCP</p>
+<div class="bar"><div class="fill"></div></div>
+</div>
+
+<div class="skill">
+<h3>Monitoring</h3>
+<p>Grafana, Prometheus, ELK Stack</p>
+<div class="bar"><div class="fill"></div></div>
+</div>
+
+<div class="skill">
+<h3>Scripting</h3>
+<p>Python, Shell, Groovy</p>
+<div class="bar"><div class="fill"></div></div>
+</div>
+
+</div>
+
 </section>
 
 <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-container">
-        <div class="project-card">
-            <h3>Portfolio Website</h3>
-            <p>A personal portfolio showcasing my skills, experience, and projects.</p>
-        </div>
-        <div class="project-card">
-            <h3>CI/CD Automation</h3>
-            <p>Implemented automated pipelines with Jenkins and Kubernetes, reducing deployment time by 70%.</p>
-        </div>
-        <div class="project-card">
-            <h3>Performance Testing Project</h3>
-            <p>Designed load testing scripts using LoadRunner to validate system reliability under peak loads.</p>
-        </div>
-    </div>
+
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>Portfolio Website</h3>
+<p>Personal portfolio showcasing DevOps experience and engineering projects.</p>
+</div>
+
+<div class="project">
+<h3>CI/CD Automation</h3>
+<p>Automated deployment pipelines with Jenkins and Kubernetes reducing release time by 70%.</p>
+</div>
+
+<div class="project">
+<h3>Performance Testing</h3>
+<p>Created LoadRunner scripts to validate large scale system reliability.</p>
+</div>
+
+</div>
+
 </section>
 
 <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:siddeshwaraswamykt@gmail.com">siddeshwaraswamykt@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/srisiddeshwaraswamy-k-t-5130b219b/" target="_blank">View Profile</a></p>
+
+<h2>Contact</h2>
+
+<p>Email: <a href="mailto:siddeshwaraswamykt@gmail.com">siddeshwaraswamykt@gmail.com</a></p>
+
+<p>
+LinkedIn:
+<a href="https://www.linkedin.com/in/srisiddeshwaraswamy-k-t-5130b219b/" target="_blank">
+View Profile
+</a>
+</p>
+
 </section>
 
 <footer>
-    <p>© 2026 Siddeshwaraswamy KT | All Rights Reserved</p>
+
+<p>© 2026 Siddeshwaraswamy KT | DevOps Portfolio</p>
+
 </footer>
 
 </body>
