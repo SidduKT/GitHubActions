@@ -10,9 +10,9 @@
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+<style>
 
 *{
 margin:0;
@@ -23,11 +23,12 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#0f172a;
+background:#020617;
 color:white;
+overflow-x:hidden;
 }
 
-/* particles background */
+/* particles */
 
 #particles-js{
 position:fixed;
@@ -42,7 +43,7 @@ nav{
 display:flex;
 justify-content:center;
 gap:40px;
-padding:20px;
+padding:18px;
 background:rgba(0,0,0,0.6);
 backdrop-filter:blur(10px);
 position:sticky;
@@ -54,6 +55,7 @@ nav a{
 color:white;
 text-decoration:none;
 font-weight:500;
+transition:.3s;
 }
 
 nav a:hover{
@@ -69,11 +71,11 @@ padding:120px 20px 80px;
 
 header h1{
 font-size:48px;
-margin-bottom:10px;
 }
 
 .typing{
 font-size:22px;
+margin-top:10px;
 color:#38bdf8;
 height:30px;
 }
@@ -83,12 +85,12 @@ height:30px;
 .btn{
 display:inline-block;
 margin-top:25px;
-padding:12px 25px;
-border-radius:8px;
+padding:12px 26px;
 background:#38bdf8;
 color:black;
-font-weight:600;
+border-radius:8px;
 text-decoration:none;
+font-weight:600;
 transition:.3s;
 }
 
@@ -96,7 +98,7 @@ transition:.3s;
 background:#0ea5e9;
 }
 
-/* sections */
+/* section */
 
 section{
 max-width:1100px;
@@ -121,17 +123,17 @@ margin:10px auto;
 /* about */
 
 #about p{
-text-align:center;
-line-height:1.8;
 max-width:800px;
 margin:auto;
+text-align:center;
+line-height:1.8;
 }
 
 /* skills */
 
 .skills{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:25px;
 }
 
@@ -139,26 +141,19 @@ gap:25px;
 background:rgba(255,255,255,0.05);
 padding:25px;
 border-radius:12px;
-backdrop-filter:blur(10px);
 transition:.4s;
+text-align:center;
 }
 
 .skill:hover{
-transform:translateY(-8px);
+transform:translateY(-10px) rotateX(5deg);
+box-shadow:0 10px 20px rgba(0,0,0,0.6);
 }
 
-.bar{
-height:8px;
-background:#333;
-border-radius:20px;
-margin-top:10px;
-overflow:hidden;
-}
-
-.fill{
-height:100%;
-width:85%;
-background:#38bdf8;
+.skill i{
+font-size:35px;
+color:#38bdf8;
+margin-bottom:10px;
 }
 
 /* projects */
@@ -178,7 +173,7 @@ transition:.4s;
 
 .project:hover{
 transform:scale(1.05);
-box-shadow:0 0 20px #38bdf8;
+box-shadow:0 0 25px #38bdf8;
 }
 
 /* timeline */
@@ -207,8 +202,8 @@ margin-top:20px;
 }
 
 .socials a{
-margin:0 10px;
 font-size:22px;
+margin:0 10px;
 color:white;
 }
 
@@ -221,8 +216,8 @@ color:#38bdf8;
 footer{
 text-align:center;
 padding:20px;
+background:#000;
 margin-top:40px;
-background:#020617;
 }
 
 /* responsive */
@@ -233,9 +228,14 @@ header h1{
 font-size:32px;
 }
 
+nav{
+gap:20px;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
@@ -268,9 +268,9 @@ font-size:32px;
 
 <p>
 
-I'm a DevOps and Performance Testing Engineer specializing in CI/CD automation,
-cloud infrastructure and load testing. I enjoy building scalable systems and
-ensuring applications perform reliably under heavy workloads.
+I am a DevOps and Performance Testing Engineer specializing in automation,
+CI/CD pipelines, cloud infrastructure and LoadRunner performance testing.
+I enjoy optimizing systems for scalability, performance and reliability.
 
 </p>
 
@@ -278,32 +278,38 @@ ensuring applications perform reliably under heavy workloads.
 
 <section id="skills">
 
-<h2>Skills</h2>
+<h2>DevOps Skills</h2>
 
 <div class="skills">
 
 <div class="skill">
-<h3>DevOps</h3>
-<p>Docker, Kubernetes, Jenkins</p>
-<div class="bar"><div class="fill"></div></div>
+<i class="fab fa-docker"></i>
+<h3>Docker</h3>
 </div>
 
 <div class="skill">
-<h3>Performance Testing</h3>
-<p>LoadRunner, JMeter, Gatling</p>
-<div class="bar"><div class="fill"></div></div>
+<i class="fas fa-server"></i>
+<h3>Kubernetes</h3>
 </div>
 
 <div class="skill">
-<h3>Cloud</h3>
-<p>AWS, Azure, GCP</p>
-<div class="bar"><div class="fill"></div></div>
+<i class="fas fa-code-branch"></i>
+<h3>Jenkins</h3>
 </div>
 
 <div class="skill">
-<h3>Monitoring</h3>
-<p>Grafana, Prometheus</p>
-<div class="bar"><div class="fill"></div></div>
+<i class="fas fa-cloud"></i>
+<h3>AWS</h3>
+</div>
+
+<div class="skill">
+<i class="fas fa-chart-line"></i>
+<h3>Grafana</h3>
+</div>
+
+<div class="skill">
+<i class="fas fa-bug"></i>
+<h3>LoadRunner</h3>
 </div>
 
 </div>
@@ -317,18 +323,18 @@ ensuring applications perform reliably under heavy workloads.
 <div class="projects">
 
 <div class="project">
-<h3>Portfolio Website</h3>
-<p>Personal website showcasing my DevOps and engineering work.</p>
-</div>
-
-<div class="project">
 <h3>CI/CD Automation</h3>
-<p>Automated deployment pipelines using Jenkins and Kubernetes.</p>
+<p>Built automated pipelines using Jenkins, Docker and Kubernetes.</p>
 </div>
 
 <div class="project">
 <h3>Performance Testing</h3>
-<p>LoadRunner scripts used to test system performance under peak load.</p>
+<p>Designed LoadRunner scripts to validate system performance under peak load.</p>
+</div>
+
+<div class="project">
+<h3>DevOps Monitoring</h3>
+<p>Implemented monitoring using Grafana and Prometheus dashboards.</p>
 </div>
 
 </div>
@@ -343,12 +349,12 @@ ensuring applications perform reliably under heavy workloads.
 
 <div class="timeline-item">
 <h4>DevOps Engineer</h4>
-<p>Working on CI/CD pipelines, infrastructure automation and monitoring.</p>
+<p>CI/CD pipelines, infrastructure automation and monitoring.</p>
 </div>
 
 <div class="timeline-item">
 <h4>Performance Testing Engineer</h4>
-<p>Created LoadRunner scripts and performance analysis reports.</p>
+<p>LoadRunner scripting, performance analysis and reporting.</p>
 </div>
 
 </div>
@@ -365,7 +371,7 @@ ensuring applications perform reliably under heavy workloads.
 
 <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
 <a href="#"><i class="fab fa-github"></i></a>
-<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fas fa-envelope"></i></a>
 
 </div>
 
@@ -373,7 +379,7 @@ ensuring applications perform reliably under heavy workloads.
 
 <footer>
 
-<p>© 2026 Siddeshwaraswamy KT</p>
+<p>© 2026 Siddeshwaraswamy KT | DevOps Engineer</p>
 
 </footer>
 
@@ -381,39 +387,60 @@ ensuring applications perform reliably under heavy workloads.
 
 <script>
 
-/* typing effect */
+/* typing animation */
 
-const text = [
-"DevOps Engineer",
-"Performance Testing Engineer",
-"LoadRunner Expert"
-];
+const words=["DevOps Engineer","Performance Testing Engineer","LoadRunner Expert"];
 
-let count=0;
-let index=0;
-let currentText='';
-let letter='';
+let i=0;
+let timer;
 
-(function type(){
+function typingEffect(){
 
-if(count===text.length){
-count=0;
-}
+let word=words[i].split("");
+var loopTyping=function(){
 
-currentText=text[count];
-letter=currentText.slice(0,++index);
-
-document.getElementById('typing').textContent=letter;
-
-if(letter.length===currentText.length){
-count++;
-index=0;
-setTimeout(type,1500);
+if(word.length>0){
+document.getElementById('typing').innerHTML+=word.shift();
 }else{
-setTimeout(type,80);
+deletingEffect();
+return false;
 }
 
-})();
+timer=setTimeout(loopTyping,100);
+
+};
+
+loopTyping();
+
+}
+
+function deletingEffect(){
+
+let word=words[i].split("");
+
+var loopDeleting=function(){
+
+if(word.length>0){
+word.pop();
+document.getElementById('typing').innerHTML=word.join("");
+}else{
+i++;
+if(i>=words.length){
+i=0;
+}
+typingEffect();
+return false;
+}
+
+timer=setTimeout(loopDeleting,50);
+
+};
+
+loopDeleting();
+
+}
+
+typingEffect();
 
 /* particles */
 
@@ -422,8 +449,8 @@ particlesJS("particles-js",{
 particles:{
 number:{value:80},
 size:{value:3},
-move:{speed:2},
-line_linked:{enable:true}
+line_linked:{enable:true},
+move:{speed:2}
 }
 
 });
