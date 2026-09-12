@@ -29,4 +29,5 @@ jobs:
           path: .
           
       - name: deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
