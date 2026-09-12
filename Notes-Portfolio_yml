@@ -1,0 +1,82 @@
+Workflow Metadata
+name: Portfolio  
+This is the name of your workflow. It will show up in the GitHub Actions tab as “Portfolio”.
+
+Triggers
+on:  
+Defines when this workflow should run.
+
+push:  
+Runs the workflow whenever code is pushed.
+
+branches: → - main  
+Restricts it to only run when changes are pushed to the main branch.
+
+workflow_dispatch: null  
+Allows you to manually trigger the workflow from the GitHub Actions UI.
+
+Permissions
+permissions:  
+Defines what this workflow can access.
+
+pages: write → Grants permission to publish to GitHub Pages.
+
+id-token: write → Required for authentication when deploying securely.
+
+Jobs
+jobs:  
+A workflow is made up of jobs. Here you have one job called deploy.
+
+Deploy Job
+deploy:  
+The job name.
+
+runs-on: ubuntu-latest  
+Specifies the runner environment (Ubuntu VM).
+
+environment:  
+Declares the environment for deployment.
+
+name: github-pages → Marks this job as deploying to GitHub Pages.
+
+url: ${{ steps.deployment.outputs.page_url }} → Dynamically sets the environment URL to the deployed site’s link (provided by the deployment step).
+
+Steps
+Steps are executed sequentially inside the job:
+
+- name: Checkout code
+
+uses: actions/checkout@v4  
+This pulls your repository’s code into the runner so subsequent steps can access it.
+
+- name: Setup GitHub Pages
+
+uses: actions/configure-pages@v4  
+Configures the Pages environment (sets up authentication, permissions, etc.).
+
+- name: upload static files
+
+uses: actions/upload-pages-artifact@v4
+
+with: path: .  
+Uploads your site’s files (here, everything in the current directory .) as an artifact that will be deployed.
+
+- name: deploy to GitHub Pages
+
+id: deployment  
+Gives this step an identifier so its outputs (like page_url) can be referenced later.
+
+uses: actions/deploy-pages@v4  
+Actually deploys the uploaded artifact to GitHub Pages. This step produces the page_url output.
+
+Why the URL Might Not Show
+The url field depends on steps.deployment.outputs.page_url. If:
+
+The id: deployment is missing, or
+
+The action doesn’t produce page_url,
+
+then the environment won’t display the link. In your case, since you’re using actions/deploy-pages@v4 with id: deployment, it should work — but the URL only appears once the deployment succeeds.
+
+✅ In short:
+This workflow builds and uploads your static site, then deploys it to GitHub Pages, and finally shows the live site URL in the GitHub Actions summary.
